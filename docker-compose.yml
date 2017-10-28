@@ -1,0 +1,22 @@
+version: "1.0"
+services:
+  mongodb:
+    image: mongo:3.5
+    volumes:
+      - type: bind
+        source: ./data/db
+        target: /data/db
+  web:
+    image: yapi/yapi:1.2.0
+    command: /bin/bash -c "yapi server"
+    links:
+      - mongodb:mongodb
+    ports:
+      - 3000:3000
+    volumes:
+      - type: bind 
+        source: ./logs
+        target: /home/yapi/yapi/logs
+      - type: bind
+        source: ./config.json
+        target: /home/yapi/yapi/config.json
