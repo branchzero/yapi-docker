@@ -2,5 +2,5 @@
 
 run command
 ```
-docker-composer up -d
+docker-compose up -d
 ```
