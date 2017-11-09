@@ -23,6 +23,10 @@ RUN wget http://cdn.npm.taobao.org/dist/node/v8.9.0/node-v8.9.0-linux-x64.tar.gz
     ln -s /home/yapi/node-v8.9.0-linux-x64/bin/node /usr/local/bin/node && \
     ln -s /home/yapi/node-v8.9.0-linux-x64/bin/npm /usr/local/bin/npm
 
+RUN mkdir -p /home/yapi/log
+
+RUN chown -R yapi:yapi /home/yapi/log
+
 # download yapi source code
 USER yapi
 
