@@ -17,6 +17,6 @@ services:
       - type: bind
         source: ./config.json
         target: /home/yapi/config.json
-      - type: volume
+      - type: bind
         source: ./data/yapi
         target: /home/yapi/log
