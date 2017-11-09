@@ -8,7 +8,7 @@ services:
         target: /data
   web:
     image: branchzero/yapi:latest
-    command: /bin/bash -c "[ ! -e init.lock ] && npm run install-server; npm run start"
+    command: /bin/bash -c "[ ! -e /home/yapi/init.lock ] && npm run install-server; npm run start"
     links:
       - mongodb:mongodb
     ports:
@@ -17,3 +17,6 @@ services:
       - type: bind
         source: ./config.json
         target: /home/yapi/config.json
+      - type: bind
+        source: ./init.lock
+        target: /home/yapi/init.lock
