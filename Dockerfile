@@ -34,5 +34,3 @@ RUN mkdir yapi && \
 WORKDIR /home/yapi/yapi
 
 RUN npm install
-
-RUN npm run install-server
