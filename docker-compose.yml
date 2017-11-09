@@ -4,10 +4,10 @@ services:
     image: mongo:3.5
     volumes:
       - type: bind
-        source: ./data/db
-        target: /data/db
+        source: ./data
+        target: /data
   web:
-    image: branchzero/yapi:1.2.4
+    image: branchzero/yapi:latest
     command: /bin/bash -c "[ ! -e init.lock ] && npm run install-server; npm run start"
     links:
       - mongodb:mongodb
