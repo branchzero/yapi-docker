@@ -27,6 +27,8 @@ RUN mkdir -p /home/yapi/log
 
 RUN chown -R yapi:yapi /home/yapi/log
 
+VOLUME ["/home/yapi/log"]
+
 # download yapi source code
 USER yapi
 
