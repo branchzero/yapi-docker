@@ -1,4 +1,2 @@
 .DS_Store
-data
-logs
-production.json
+config.json
