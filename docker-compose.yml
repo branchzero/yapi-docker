@@ -4,7 +4,7 @@ services:
     image: mongo:3.5
     volumes:
       - type: bind
-        source: ./data/mongo
+        source: ./data/db
         target: /data/db
   web:
     image: branchzero/yapi:1.3.4
