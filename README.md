@@ -1,6 +1,7 @@
 # Usage
 
 - env：
+	- Hardware requirements：`1 GB RAM minimum`
 	- work path：`mkdir -p /opt/git-data`
 	- ip：`http://192.168.1.121`
 - clone：
