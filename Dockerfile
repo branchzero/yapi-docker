@@ -33,8 +33,8 @@ VOLUME ["/home/yapi/log"]
 USER yapi
 
 RUN mkdir yapi && \
-    wget https://github.com/YMFE/yapi/archive/v1.4.3.tar.gz && \
-    tar -xzvf v1.4.3.tar.gz -C yapi --strip-components 1
+    wget https://github.com/YMFE/yapi/archive/1.4.3.tar.gz && \
+    tar -xzvf 1.4.3.tar.gz -C yapi --strip-components 1
 
 # npm install dependencies and run build
 WORKDIR /home/yapi/yapi
