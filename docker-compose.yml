@@ -7,7 +7,7 @@ services:
         source: ./data/db
         target: /data/db
   web:
-    image: branchzero/yapi:1.4.4
+    image: branchzero/yapi:1.7.0
     command: /bin/bash -c "[ ! -e /home/yapi/log/init.lock ] && npm run install-server && touch /home/yapi/log/init.lock; npm run start"
     links:
       - mongodb:mongodb
