@@ -39,4 +39,6 @@ RUN mkdir yapi && \
 # npm install dependencies and run build
 WORKDIR /home/yapi/yapi
 
-RUN npm install
+RUN npm install && \
+    npm install -g yapi-cli --registry https://registry.npm.taobao.org && \
+    yapi plugin --name yapi-plugin-qsso
