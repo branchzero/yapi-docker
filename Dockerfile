@@ -18,14 +18,15 @@ RUN apt-get update && \
     ca-certificates
 
 # install nodejs
-RUN wget http://cdn.npm.taobao.org/dist/node/v8.9.0/node-v8.9.0-linux-x64.tar.gz && \
-    tar -xzvf node-v8.9.0-linux-x64.tar.gz && \
-    ln -s /home/yapi/node-v8.9.0-linux-x64/bin/node /usr/local/bin/node && \
-    ln -s /home/yapi/node-v8.9.0-linux-x64/bin/npm /usr/local/bin/npm
+RUN wget http://cdn.npm.taobao.org/dist/node/v12.12.0/node-v12.12.0-linux-x64.tar.gz && \
+    tar -xzvf node-v12.12.0-linux-x64.tar.gz && \
+    ln -s /home/yapi/node-v12.12.0-linux-x64/bin/node /usr/local/bin/node && \
+    ln -s /home/yapi/node-v12.12.0-linux-x64/bin/npm /usr/local/bin/npm
 
 RUN mkdir -p /home/yapi/log
 
-RUN chown -R yapi:yapi /home/yapi/log
+RUN chown -R yapi:yapi /home/yapi/log && \
+    chown -R yapi:yapi /home/yapi/node-v12.12.0-linux-x64
 
 VOLUME ["/home/yapi/log"]
 
