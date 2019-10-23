@@ -42,4 +42,4 @@ WORKDIR /home/yapi/yapi
 
 RUN npm install && \
     npm install -g yapi-cli --registry https://registry.npm.taobao.org && \
-    yapi plugin --name yapi-plugin-qsso
+    /home/yapi/node-v11.15.0-linux-x64/bin/yapi plugin --name yapi-plugin-qsso
